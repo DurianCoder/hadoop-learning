@@ -18,7 +18,7 @@ class HdfsUtilTest {
 
     @Test
     void catFile() {
-        HdfsFileSystemUtils.catHdfsFile("hdfs:/input/test1.txt");
+        HdfsFileSystemUtils.catHdfsFile("hdfs:/core-site.xml");
     }
 
     @Test

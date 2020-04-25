@@ -32,7 +32,7 @@ public class HdfsFileSystemUtils {
     static {
         conf = new Configuration();
         // 设置HDFS访问地址
-        conf.set("fs.default.name", "hdfs://centos01:9000");
+        conf.set("fs.default.name", "hdfs://centos01:8020");
     }
 
     /**
