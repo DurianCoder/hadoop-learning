@@ -2,24 +2,24 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 
 <configuration>
-    <!--  这个目录是region服务器共享的目录，用来持久存储HBase的数据，
-    		默认值为：${hbase.tmp.dir}/hbase，如果不修改这个配置，数据将会在集群重启时丢失。 -->
     <property>
         <name>hbase.rootdir</name>
-        <!-- hadoop引入JQM负载均衡时，这里配置dfs.namenode 端口 -->
         <value>hdfs://centos01:8020/hbase</value>
     </property>
 
-    <!-- 指定hbase集群为分布式集群 -->
     <property>
         <name>hbase.cluster.distributed</name>
         <value>true</value>
     </property>
 
-    <!-- 指定zookeeper集群，有多个用英文逗号分隔 -->
     <property>
         <name>hbase.zookeeper.quorum</name>
-        <value>centos01:2181,centos02:2181,centos03:2181</value>
+        <value>centos01,centos02,centos03</value>
+    </property>
+
+    <property>
+        <name>hbase.zookeeper.property.clientPort</name>
+        <value>2181</value>
     </property>
 
     <!-- Zookeeper元数据快照的存储目录）  -->
@@ -34,15 +34,20 @@
         <value>16010</value>
     </property>
 
+    <property>
+        <name>hbase.regionserver.port</name>
+        <value>16020</value>
+    </property>
+
     <!-- 指定HBase RegionServer web页面访问端口，默认端口号16030 -->
     <property>
         <name>hbase.regionserver.info.port</name>
         <value>16030</value>
     </property>
 
-    <!-- 解决启动HMaster无法初始化WAL的问题 -->
     <property>
         <name>hbase.unsafe.stream.capability.enforce</name>
         <value>false</value>
     </property>
+
 </configuration>

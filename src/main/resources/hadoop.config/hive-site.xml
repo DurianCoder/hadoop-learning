@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!-- hive在hdfs中的仓库地址-->
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>/user/hive/warehouse</value>
+        <description>location of default database for the warehouse</description>
+    </property>
+
+    <!-- 是否开启本地模式-->
+    <property>
+        <name>hive.metastore.local</name>
+        <value>false</value>
+    </property>
+
+    <!-- 指定metastore地址-->
+    <property>
+        <name>hive.metastore.uris</name>
+        <value>thrift://centos01:9083</value>
+        <description>Thrift URI for the remote metastore. Used by metastore client to connect to remote metastore.</description>
+    </property>
+
+    <!--    hive中提示数据库名-->
+    <property>
+        <name>hive.cli.print.current.db</name>
+        <value>true</value>
+        <description>Whether to include the current database in the Hive prompt.</description>
+    </property>
+
+    <!--    hive中提示列名-->
+    <property>
+        <name>hive.cli.print.header</name>
+        <value>true</value>
+        <description>Whether to print the names of the columns in query output.</description>
+    </property>
+
+</configuration>
