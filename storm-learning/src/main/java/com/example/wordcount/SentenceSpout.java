@@ -45,7 +45,7 @@ public class SentenceSpout extends BaseRichSpout {
     public void nextTuple() {
         Utils.sleep(2000);
         String sentence = sentences[random.nextInt(sentences.length)];
-        this.spoutOutputCollector.emit(new Values(sentences));
+        this.spoutOutputCollector.emit(new Values(sentence));
     }
 
 
