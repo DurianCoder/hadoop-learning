@@ -9,7 +9,7 @@ import scala.reflect.internal.util.StringOps
  */
 object Hello extends App {
 
-  def main(args: Array[String]): Unit = {
+  override def main(args: Array[String]): Unit = {
     //    val greeter = new defaultGreeter()
     //    greeter.greet("ying.jiang")
     //

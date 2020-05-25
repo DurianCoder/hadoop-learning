@@ -5,6 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>storm-learning</module>
+        <module>scala-maven</module>
+        <module>SparkWordCount</module>
+        <module>spark-wordcount</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

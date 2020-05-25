@@ -34,7 +34,7 @@ public class HdfsFileSystemUtils {
 
     static {
         conf = new Configuration();
-        // 设置HDFS访问地址
+        // 设置HDFS访问地址， 可以设置hdfs集群，来保证hdfs高可用
         conf.set("fs.default.name", "hdfs://centos01:8020");
     }
 
